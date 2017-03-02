@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title> Gladrags </title>
+    
+    <!- CSS ->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/media_queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <! JS ->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/menu_toggle.js"></script>
+    
+    <!- JQuery ->
+    <script type="text/javascript" src="js/scroll.js"></script>
+    
+</head>
+<body>
+    <div id="top">
+        <div id="header">
+            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank"><i class="fa fa-2x fb black fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="index.html"><img src="bilder/GLADRAGS-logotyp.jpg"></a>
+        </div>
+        <nav>
+        <div id="mobile_menu">
+            <!--  Knapp för visning av meny i sutfplatta och mobilvy -->
+            <button><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+            <span> MENY </span>
+            <!--  Knapp slutar -->
+        </div>
+            <ul id="menu_ul">
+                <li><a href="index.html"> STARTSIDA </a></li>
+                <li><a href="varumarken.html"> VARUMÄRKEN </a></li>
+                <li><a href="om_oss.html"> OM OSS </a></li>
+                <li><a href="anstallda.html"> ANSTÄLLDA </a></li>
+                <li><a href="kontakt.html"> KONTAKT </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div class="text">
+                <h1> Kontakt </h1>
+                <h2 style="margin-top:5px;"> Besöksadress </h2>
+                <p id="contact"> Köpmangatan 14 </p>
+                <p id="contact"> 641 30 Katrineholm </p>
+                <h2> Kontaktuppgifter </h2>
+                <p id="contact"> Telefonnummer: 0150-533 80 </p>
+                <a id="contact" href="mailto:info@gladrags.se"> E-mail: info@gladrags.se </a>
+                <div id="map" class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4110.344479160251!2d16.201884897195818!3d58.9955787889517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d01a4a64e486d9b!2sGlad+Rags!5e0!3m2!1ssv!2sse!4v1485865134691" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <!-- Kontaktformulär -->
+                <form>
+                    <h2> Kontaktformulär </h2>
+                    <br>
+                    <label for="obligatoriskt"> * Obligatoriskt </label>
+                    <br><br>
+                    <label for="namn"> Namn </label>
+                    <input type="text" name="first-name">
+                    
+                    <label for="namn"> Telefon </label>
+                    <input type="text" name="telefon">
+
+                    <label for="email"> Email* </label>
+                    <input type="text" name="email">
+
+                    <p> Meddelande* </p>
+                    <textarea cols="30" rows="10" placeholder=" Skriv ditt meddelande här..."></textarea>
+                    <input type="submit">
+                </form>
+                <!-- Kontaktformulär slutar -->
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="wrapper">
+            <div id="left">
+                <div id="hitta">
+                    <h1> Hitta </h1>
+                    <p> Köpmangatan 14 </p>
+                    <p> 641 30 Katrineholm </p>
+                    <a href="kontakt.html#map"><p> Google Maps </p></a>
+                </div>
+            </div>
+            <div id="center">
+                <div id="kontakt">
+                    <h1> Kontakt  </h1>
+                    <p> Telefon: 0150-533 80 </p>
+                    <a href="mailto:info@gladrags.se"> Mail: info@gladrags.se </a>
+                </div>
+            </div>
+            <div id="right">
+                <div id="footer_menu">
+                    <a href="index.html"><h1> Gladrags  </h1></a>
+                    <a href="varumarken.html"> Varumärken </a>
+                    <a href="om_oss.html"> Om oss </a>
+                    <a href="anstallda.html"> Anställda </a>
+                    <a href="kontakt.html"> Kontakt </a>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank">
+                <i class="fa fa-2x fb black fa-facebook-square" style="position:absolute;bottom:-18px;left:0;" aria-hidden="true"></i>
+            </a>
+            <a href="index.html" class="copyright"><p> © Gladrags, 2015  </p></a>
+            <a href="#" class="go-top">
+                <i class="fa fa-2x black arrow fa-level-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
