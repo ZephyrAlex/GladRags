@@ -1,8 +1,9 @@
-* {
+ *{
     margin: 0;
     padding: 0;
 }
 
+/* Header och Meny delen */
 #top {
     width: 100%;
     position: fixed;
@@ -10,15 +11,18 @@
     z-index: 15;
 }
 
+/* Header med logo */
 #header {
     text-align: center;
     background-color: white;
 }
 
+/* Länk på logo till startsida */
 #header a {
     clear: none;
 }
 
+/* Facebook knapp */
 .fb {
     float: left;
     position: absolute;
@@ -26,20 +30,24 @@
     margin: 0.5em;
 }
 
+/* Gladrags logo */
 #header img {
     height: 4.5em;
     padding: 0.8em;
 }
 
+/* Färg */
 .black {
     text-decoration: none;
     color: black;
 }
 
+/* Main innehåll */
 #main {
     margin-top: 152px;
 }
 
+/* Main innehåll */
 #content {
     width: 80%;
     margin: 0 auto;
@@ -47,23 +55,27 @@
     clear: both;
 }
 
+/* Main innehåll, text */
 .text {
     width: 70%;
     margin: 0 auto;
     padding-top: 2em;
 }
 
+/* Första header */
 .text h1 {
     font-family: Arial;
     font-size: 1.8em;
 }
 
+/* Andra header */
 .text h2 {
     font-family: Arial;
     font-size: 1.5em;
     margin-top: 1em;
 }
 
+/* Text under header 1 */
 .text p {
     font-family: Arial;
     font-size: 1em;
@@ -71,10 +83,12 @@
     text-align: justify;
 }
 
+/* Erbjudande header */
 #offers h2 {
     text-align: center;
 }
 
+/* Om oss innehåll */
 #om_oss {
     width: 100%;
     border: 1px solid #666;
