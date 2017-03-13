@@ -1,22 +1,27 @@
+/* Kartans storlek */
 #map {
     margin-top: 2em;
     margin-bottom: 2em;
 }
 
+/* Responiv inställningar Karta */
 .map-responsive{
     overflow:hidden;
     padding-bottom:75%;
     position:relative;
     height:0;
 }
+
+/* Responiv inställningar Karta */
 .map-responsive iframe{
     left:0;
     top:0;
-    height:100%;
+    height: 100%;
     width:100%;
     position:absolute;
 }
 
+/* Position Texter */
 #contact {
     font-family: Arial;
     font-size: 1em;
@@ -26,14 +31,20 @@
     color: black;
 }
 
+/* 
 #contact a:hover {
     text-decoration: underline;
 }
+*/
+
+/* Formulär storlek */
 
 form {
     width: 100%;
+
 }
 
+/* Namnen på textfälten */
 label {
     width: 100%;
     height: 2em;
@@ -41,6 +52,7 @@ label {
     font-size: 1em;
 }
 
+/* Textfälten */
 input {
     width: 100%;
     background-color: #e7e7e7;
@@ -50,15 +62,18 @@ input {
     margin-bottom: 1em;
 }
 
+/* Skicka knappen */
 input[type=submit] {
     width: 8em;
     height: 2em;
+    cursor: pointer;
 }
 
 input submit {
     width: 50px;
 }
 
+/* Meddelande textarea */
 textarea {
     width: 100%;
     font-family: Arial;
