@@ -1,0 +1,70 @@
+nav {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    height: 3em;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    box-shadow: 0 5px 10px #666;
+    background-color: white;
+    z-index: 50;
+}
+
+nav ul {
+    list-style: none;
+    width: 24em;
+    height: 3em;
+    margin: 0 auto;
+}
+
+nav li {
+    float: left;
+    width: 8em;
+    height: 3em;
+    text-align: center;
+}
+
+nav a {
+    text-align: center;
+    width: 100%;
+    height: 2.2em;
+    display: block;
+    padding-top: 1.1em;
+    margin: 0;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav li:hover {
+    background-color: #e2dfdf;
+}
+
+nav p {
+    font-family: Arial;
+    font-size: 0.9em;
+}
+
+nav #user {
+    position: absolute;
+    top: 1.2em;
+    right: 6.5em;
+    font-weight: bold;
+}
+
+#logoutbutton {
+    position: absolute;
+    top: 0.7em;
+    right: 0.5em;    
+    width: 70px;
+    background-color: #e7e7e7;
+    line-height: 1.3em;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
