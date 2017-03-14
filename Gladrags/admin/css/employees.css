@@ -1,0 +1,59 @@
+#employees {
+    text-align: center;
+}
+
+#employees input {
+   margin-bottom: 0.5em;
+}
+
+#employees textarea {
+    width: 241px;
+}
+
+#employees #file {
+    width: 241px;
+}
+
+#employees p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.employee {
+    position: relative;
+    width: 250px;
+    height: 360px;
+    margin: 0 auto;
+    background-color: solid #bcbcbc;
+    border-radius: 4px;
+    background-color: #e7e7e7;
+    box-shadow: 0 5px 10px #666;
+}
+
+.employee_img {
+    margin-top: 10px;
+    width: 230px;
+    height: 230px;
+    border-radius: 4px;
+}
+
+.employee h3 {
+    font-size: 1.5em;
+}
+
+.employee h4 {
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+.employee input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
