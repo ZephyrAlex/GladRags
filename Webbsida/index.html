@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/ninja-slider.css">
     <link rel="stylesheet" href="assets/css/media_queries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/resp.css" media="screen and (max-width: 1300px)">
     
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/slider.js"></script>
+    <script type="text/javascript" src="assets/js/ninja-slider.js"></script>
     <script type="text/javascript" src="assets/js/menu_toggle.js"></script>
     
     <!-- JQuery -->
@@ -62,44 +63,115 @@
         <div id="content">
             <!-- Text och bilder -->
             <div class="text">
-                <h1> Välkommen </h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Tullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <div id="offers">
-                    <h2> Erbjudanden </h2>
+                 
+                
                     
                     <!--Image slider start-->
-                    <div id='slider'>
+                    <div id="ninja-slider">
                         <div class="slider-inner">
-                            <ul>
+                        <ul>
+                        <li>
+                            <a class="ns-img" href="bilder/1.jpg"></a>
+                            <div class="caption"></div>
+                         </li>
+                            <li><a class="ns-img" href="bilder/2.jpg"></a>
+                                <div class="caption"></div>
+                                
+                                <div class="caption cap1">NYA ERBJUDANDEN</div>
+                                    <div class="caption cap1 cap2">VARJE VECKA!</div>
+                                    <div class="caption"></div>
+                                
+                                
+                             </li>
+                                    <li>
+                                        <a href="/"><img class="ns-img" src="bilder/kill_mossor.jpg" style="cursor:pointer;" /></a>
+                                        <div class="caption"></div>
+                                        
+                                    </li>
                                 <li>
-                                    <a class="img" href="bilder/img_1.jpg" data-fs-image="bilder/img_1.jpg"></a>
+                                    <a class="ns-img" href="bilder/halsdukar.jpg"></a>
+                                    <div class="caption cap1">BESÖK</div>
+                                    <div class="caption cap1 cap2">VÅR FACEBOOK-SIDA!</div>
+                                    <div class="caption"></div>
+                                    
                                 </li>
-                                <li>
-                                    <span class="img" style="background-image:url(bilder/img_2.jpg);" data-fs-image="bilder/img_2.jpg"></span>
-                                </li>
-                                <li>
-                                    <a href="/"><img class="img" src="bilder/img_1.jpg" data-fs-image="bilder/img_1.jpg" /></a>
-                                </li>
-                                <li>
-                                    <a class="img" href="bilder/img_2.jpg" data-fs-image="bilder/img_2.jpg"></a>
-                                </li>
-                            </ul>
-                            <div class="fs-icon" title="Expand/Close"></div>
+                        </ul>
+                        <div class="fs-icon" title="Förstora/Stäng"></div>
                         </div>
-                    </div>
+                     </div>
+                   
                     <!--Image slider slutar-->
                     
-                </div>
-                <h2> Nyheter </h2>
+                
+                <h2> Välkommen! </h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Tullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-            </div>
-        </div>
+                
+                
+                <div id="offers"> <br> <h2> Veckans Erbjudanden! </h2> </div> <div class="body-content1">  </div>
+       <div class="section-inner">
+        
+		<div class="thirds clearfix">
+			
+			<!-- one-third -->
+			<div class="one-third mobile-collapse">
+			 
+			 <div class="capp"> 499:- </div>	
+				<img id="imgn" src="bilder/img_1.jpg" alt="beskrivning" title="beskrivning"  />
+							
+				
+
+			</div>
+			
+			<!-- one-third -->
+			<div class="one-third one-third-second mobile-collapse">
+			<div class="capp"> 699:- </div>
+			
+				<img id="imgn" src="bilder/img_1.jpg" alt="beskrivning" title="beskrivning"/>
+				
+			</div>
+			
+			<!-- one-third -->
+			<div class="one-third one-third-last mobile-collapse">
+			<div class="capp"> 349:- </div>
+				<img id="imgn" src="bilder/img_1.jpg"  alt="beskrivning" title="beskrivning"/>
+				
+				
+			</div>
+			
+		</div>
+		
+		<!-- two-columns -->
+		<div class="two-columns clearfix">
+			
+			<!-- main -->
+			<div class="main mobile-collapse"> </div>
+			
+			<div class="side mobile-collapse"> </div>
+			
+		</div>
+		
+	</div>
+	<br>
+	<br>
+	<h2> Facebook-Flöde </h2>
+               <br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Tullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+	
+	
+	
+	
     </div>
-    <!-- Bodyn slutar -->
+	    </div>  
+             </div>
+        
+        
+        
+        
+    <!-- Body innehåll slutar -->
     
     <!-- Footer börjar -->
     <div id="footer">
