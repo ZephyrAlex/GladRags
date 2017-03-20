@@ -20,9 +20,6 @@
     <script type="text/javascript" src="assets/js/slider.js"></script>
     <script type="text/javascript" src="assets/js/menu_toggle.js"></script>
     
-    <!-- JQuery -->
-    <script type="text/javascript" src="assets/js/scroll.js"></script>
-    
     <!-- fav icon -->
     <link rel="shortcut icon" href="bilder/favicon.png"/>
     
@@ -133,17 +130,38 @@
         
         <!-- Copyright sektionen -->
         <div id="copyright">
-            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank">
-                <i class="fa fa-2x fb black fa-facebook-square" style="position:absolute;bottom:-18px;left:0;" aria-hidden="true"></i>
-            </a>
+            
             <a href="index.html" class="copyright"><p> © Gladrags, 2015  </p></a>
-            <a href="#" class="go-top">
-                <i class="fa fa-2x black arrow fa-level-up" aria-hidden="true"></i>
-            </a>
+           
         </div>
         <!-- Copyright sektionen slutar -->
         
     </div>
     <!-- Footer slutar -->
+    
+      <!-- Tillbaka till toppen knapp -->
+     <script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script> 
+<!-- Tillbaka till toppen knapp slutar -->
+
 </body>
 </html>
