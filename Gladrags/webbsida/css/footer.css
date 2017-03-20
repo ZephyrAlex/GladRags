@@ -1,4 +1,3 @@
-/* Footer innehåll */
 #footer {
     clear: both;
     position: relative;
@@ -9,21 +8,17 @@
     box-shadow: 0 -1px 10px #8d8d8d;
 }
 
-/* Header, Hitta, Kontakt, Gladrags */
 #footer h1{
     font-family: Arial;
     font-size: 1.5em;
-    
 }
 
-/* Footer text */
 #footer p{
     font-family: Arial;
     font-size: 1em;
     line-height: 1.5em;
 }
 
-/* Wrapper i footern */ 
 #wrapper {
     width: 80%;
     height: 9.5em;
@@ -31,21 +26,18 @@
     border-bottom: 1px solid black;
 }
 
-/* Vänstra delen av footern */
 #left {
     float:left;
     width: 33%;
     height: 9.5em;
 }
 
-/* Vänstra delen av footern, Hitta, Position */
 #hitta {
     float: left;
     width: auto;
     margin-top: 1em;
 }
 
-/* Vänstra delen Google maps */
 #hitta a {
     float: left;
     font-family: Arial;
@@ -55,26 +47,22 @@
     text-decoration: none;
 }
 
-/* Hover effekt Google maps text */
 #hitta a:hover {
     text-decoration: underline;
 }
 
-/* Mitten delen av footern, Kontakt */
 #center {
     float: left;
     width: 33%;
-    height: .5em;
+    height: 9.5em;
 }
 
-/* Kontakt Position */
 #kontakt {
     margin: 0 auto;
     width: 10.2em;;
     padding-top: 1em;
 }
 
-/* Mail: info@gladrags.se inställningar*/
 #kontakt a {
     float: left;
     font-family: Arial;
@@ -84,26 +72,22 @@
     text-decoration: none;
 }
 
-/* Hover-effekt Kontakt */
 #kontakt a:hover {
     text-decoration: underline;
 }
 
-/* Högra delen av footern, Gladrags */
 #right {
     float:left;
     width: 33%;
     height: 9.5em;
 }
 
-/* Footer meny, högra delen */
 #footer_menu {
     float:right;
     width: 6.6em;
     margin-top: 1em;
 }
 
-/* Footer meny inställningar, högra delen */
 #footer_menu a {
     width: 100%;
     float: left;
@@ -115,12 +99,10 @@
     text-decoration: none;
 }
 
-/* Footer meny hover-effekt */
 #footer_menu a:hover {
     text-decoration: underline;
 }
 
-/* Copyright delen längst ner på footern */
 #copyright {
     position: relative;
     float: right;
@@ -129,7 +111,6 @@
     text-align: center;
 }
 
-/* Copyright innehåll*/
 .copyright {
     display: inline-block;
     width: 14em;
@@ -137,7 +118,6 @@
     text-decoration: none;
 }
 
-/* Copyright text */
 #copyright p {
     margin-top: 1em;
     text-align: center;
@@ -145,7 +125,7 @@
     font-size: 1em;
     color: black;
 }
-/* Tillbaka till toppen knapp*/
+
 .arrow {
     float: right;
     margin-right: 0.5em;
