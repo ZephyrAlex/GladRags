@@ -20,9 +20,6 @@
     <script type="text/javascript" src="assets/js/ninja-slider.js"></script>
     <script type="text/javascript" src="assets/js/menu_toggle.js"></script>
     
-    <!-- JQuery -->
-    <script type="text/javascript" src="assets/js/scroll.js"></script>
-    
     <!-- fav icon -->
     <link rel="shortcut icon" href="bilder/favicon.png"/>
     
@@ -109,7 +106,7 @@
                 </p>
                 
                 
-                <div id="offers"> <br> <h2> Veckans Erbjudanden! </h2> </div> <div class="body-content1">  </div>
+                <div id="offers"> <br> <h2> Veckans Erbjudanden! </h2> </div> <div class="body-content1">  
        <div class="section-inner">
         
 		<div class="thirds clearfix">
@@ -117,8 +114,8 @@
 			<!-- one-third -->
 			<div class="one-third mobile-collapse">
 			 
-			 <div class="capp"> 499:- </div>	
-				<img id="imgn" src="bilder/img_1.jpg" alt="beskrivning" title="beskrivning"  />
+			 <div class="capp" alt="499kr" title="499kr"> 499:- </div>	
+				<img id="imgn" src="bilder/img_1.jpg" alt="Erjudande 1" title="Erjudande 1"  />
 							
 				
 
@@ -126,16 +123,16 @@
 			
 			<!-- one-third -->
 			<div class="one-third one-third-second mobile-collapse">
-			<div class="capp"> 699:- </div>
+			<div class="capp" alt="699kr" title="699kr"> 699:- </div>
 			
-				<img id="imgn" src="bilder/img_1.jpg" alt="beskrivning" title="beskrivning"/>
+				<img id="imgn" src="bilder/img_1.jpg" alt="Erbjudande 2" title="Erbjudande 2"/>
 				
 			</div>
 			
 			<!-- one-third -->
 			<div class="one-third one-third-last mobile-collapse">
-			<div class="capp"> 349:- </div>
-				<img id="imgn" src="bilder/img_1.jpg"  alt="beskrivning" title="beskrivning"/>
+			<div class="capp" alt="349kr" title="349kr"> 349:- </div>
+				<img id="imgn" src="bilder/img_1.jpg"  alt="Erbjudande 3" title="Erbjudande 3"/>
 				
 				
 			</div>
@@ -152,6 +149,7 @@
 			
 		</div>
 		
+	</div>
 	</div>
 	<br>
 	<br>
@@ -206,17 +204,38 @@
          
         <!-- Copyright sektionen -->
         <div id="copyright">
-            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank">
-                <i class="fa fa-2x fb black fa-facebook-square" style="position:absolute;bottom:-18px;left:0;" aria-hidden="true"></i>
-            </a>
+            
             <a href="index.html" class="copyright"><p> © Gladrags, 2015  </p></a>
-            <a href="#" class="go-top">
-                <i class="fa fa-2x black arrow fa-level-up" aria-hidden="true"></i>
-            </a>
+            
         </div>
         <!-- Copyright sektionen slutar -->
         
     </div>
     <!-- Footer slutar -->
+    
+     <!-- Tillbaka till toppen knapp -->
+     <script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script> 
+<!-- Tillbaka till toppen knapp slutar -->
+
 </body>
 </html>
