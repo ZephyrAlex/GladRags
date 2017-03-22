@@ -35,11 +35,14 @@
                     unlink($file);
                     break;
                 }
-
-                //Delete selected employee from database
-                $sql_del = "Delete FROM employees WHERE employee_id = '$id'";
             }
-
+            
+            //Separate ID-array
+            $comma_separated = implode(",", $idArr);
+            
+            //Delete selected brand from database
+            $sql_del = "Delete FROM employees WHERE employee_id IN($comma_separated)";
+            
             if (mysqli_query($connection, $sql_del)) {
                 echo nl2br("Selected employees successfully deleted.\n");
             } 

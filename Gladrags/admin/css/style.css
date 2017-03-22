@@ -6,7 +6,7 @@
 #main {
     width: 70%;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 40px;
     font-family: Arial;
 }
@@ -20,7 +20,7 @@
 
 #main p {
     margin-bottom: 1em;
-    text-align: justify;
+    text-align: justify; 
 }
 
 .edit {

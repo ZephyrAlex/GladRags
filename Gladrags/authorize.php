@@ -15,7 +15,7 @@
     global $username;
     $password = $_POST['password'];
     
-    //För att skydda mot mysql injection
+    //För att skydda mot mysql injection 
     $username = stripcslashes($username);
     $password = stripcslashes($password);
     $username = mysqli_real_escape_string($connection, $username);
