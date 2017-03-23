@@ -1,0 +1,30 @@
+form{
+    margin-top: 50px; 
+    width: 415px;
+    margin-left: auto;
+    margin-right: auto;
+}
+form input{
+    font-size: 2em;
+    padding: 5px;
+    border: #ccc 2px solid;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#medelande{
+    width: 100%;
+    font-size: 1.5em;
+    padding: 5px;
+    border: #ccc 3px solid;
+}
+button{
+    border-radius: 10px;
+    font-size: 2em;
+    padding: 5px;
+    border: #ccc 2px solid;
+    width: 80%;
+    margin-bottom: 20px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
