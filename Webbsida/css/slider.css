@@ -153,12 +153,12 @@
 }
 
 #slider-prev {
-    left: 20px;
+    left: -42px;
     /*set it with a positive value if .slider-inner does not have max-width setting.*/
 }
 
 #slider-next {
-    right: 20px;
+    right: -42px;
 }
 
 

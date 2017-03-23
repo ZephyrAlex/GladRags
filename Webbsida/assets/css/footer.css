@@ -13,6 +13,7 @@
 #footer h1{
     font-family: Arial;
     font-size: 1.5em;
+    
 }
 
 /* Footer text */
@@ -132,7 +133,7 @@
 .copyright {
     display: inline-block;
     width: 14em;
-    margin: 0 auto;
+    margin: auto;
     text-decoration: none;
 }
 

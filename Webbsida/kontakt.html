@@ -20,9 +20,6 @@
     <script type="text/javascript" src="assets/js/slider.js"></script>
     <script type="text/javascript" src="assets/js/menu_toggle.js"></script>
     
-    <!-- JQuery -->
-    <script type="text/javascript" src="assets/js/scroll.js"></script>
-    
     <!-- fav icon -->
     <link rel="shortcut icon" href="bilder/favicon.png"/>
     
@@ -75,24 +72,27 @@
                 </div>
                 
                 <!-- Kontaktformulär -->
-                <form>
-                    <h2> Kontaktformulär </h2>
-                    <br>
-                    <label for="obligatoriskt"> * Obligatoriskt </label>
-                    <br><br>
-                    <label for="namn"> Namn </label>
-                    <input type="text" name="first-name">
-                    
-                    <label for="namn"> Telefon </label>
-                    <input type="text" name="telefon">
-
-                    <label for="email"> Email* </label>
-                    <input type="text" name="email">
-
-                    <p> Meddelande* </p>
-                    <textarea cols="30" rows="10" placeholder=" Skriv ditt meddelande här..."></textarea>
-                    <input type="submit">
-                </form>
+                <h2>Kontakta oss:</h2>
+                <div id="form-div">
+                    <form class="form" id="form1">
+                        <p class="name">
+                            <input name="name" autocomplete="off" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Namn... (krav)" id="name" /> 
+                        </p>
+                        <p class="email">
+                            <input name="email" autocomplete="off" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="E-post... (krav)" /> 
+                        </p>
+                        <p class="phone">
+                            <input name="telephone" autocomplete="off" type="text" class="feedback-input" id="telephone" placeholder="Telefonnummer... (frivilligt)" />
+                        </p>
+                        <p class="comment">
+                            <textarea name="text" autocomplete="off" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Kommentar... (minst 10 tecken)"></textarea>
+                        </p>
+                        <div class="submit">
+                            <input type="submit" value="SKICKA" id="button" />
+                            <div class="ease"></div>
+                        </div>
+                    </form>
+                </div>
                 <!-- Kontaktformulär slutar -->
                 
             </div>
@@ -133,17 +133,38 @@
         
         <!-- Copyright sektionen -->
         <div id="copyright">
-            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank">
-                <i class="fa fa-2x fb black fa-facebook-square" style="position:absolute;bottom:-18px;left:0;" aria-hidden="true"></i>
-            </a>
+            
             <a href="index.html" class="copyright"><p> © Gladrags, 2015  </p></a>
-            <a href="#" class="go-top">
-                <i class="fa fa-2x black arrow fa-level-up" aria-hidden="true"></i>
-            </a>
+           
         </div>
         <!-- Copyright sektionen slutar -->
         
     </div>
     <!-- Footer slutar -->
+    
+      <!-- Tillbaka till toppen knapp -->
+     <script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script> 
+<!-- Tillbaka till toppen knapp slutar -->
+
 </body>
 </html>

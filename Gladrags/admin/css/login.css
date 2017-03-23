@@ -1,0 +1,41 @@
+body {
+    background: #eee;
+}
+
+form {
+    border: solid gray 1px;
+    width: 200px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#logotype {
+    width: 200px; 
+}
+
+#button {
+    width: 60px;
+    margin-left: 79%;
+    background-color: #e7e7e7;
+    line-height: 1.2em;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+label {
+    font-family: Arial;
+}
+
+input {
+    font-size: 1.1em;
+    background-color: #e7e7e7;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+

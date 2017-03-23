@@ -1,0 +1,45 @@
+#brands {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#brands input {
+   margin-bottom: 0.5em;
+}
+
+#brands textarea {
+    width: 241px;
+}
+
+#brands #file {
+    width: 241px;
+}
+
+#brands p {
+    margin-bottom: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.brand input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 50;
+}
+
+.brand {
+    position: relative;
+    margin: auto;
+    width: 258px;
+    height: 242px;
+}
+
+.brand a {
+    margin: 0;
+}

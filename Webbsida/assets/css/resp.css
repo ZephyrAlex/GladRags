@@ -1,0 +1,45 @@
+.one-third {
+	width: 47.5%;
+}
+
+.one-third-second {
+	margin: 0;
+}
+
+.one-third-last {
+	clear: both;
+	float: none;
+	width: auto;
+	padding: 0px 0 10px 0;
+}
+
+.nav ul li {
+	width: 25%;
+	border-bottom: 1px solid #bababa;
+}
+
+@media screen and (max-width: 620px) {
+	div.nav ul li {
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	.nav ul li {
+		width: 50%;
+		font-size: 85%;
+	}
+	
+	.mobile-collapse {
+		width: auto;
+		float: none;
+		margin-right: 0;
+        background-color: white;
+	}
+	
+	.hide-mobile {
+		display: none;
+	}
+		
+}

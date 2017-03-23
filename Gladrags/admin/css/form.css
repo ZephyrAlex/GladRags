@@ -1,0 +1,35 @@
+#file {
+    width: 65%;
+    background-color: #e7e7e7;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+#button {
+    margin: 0 auto;
+    padding: 2px;
+    background-color: #e7e7e7;
+    line-height: 1.3em;
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+input {
+    font-size: 1.2em;
+}
+
+textarea {
+    width: 85%;
+    margin: auto;
+    font-family: Arial;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+#offers {
+    margin-bottom: 40px;
+}
+
+#delete_form {
+    margin-top: 10px;
+}
