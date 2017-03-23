@@ -1,0 +1,28 @@
+#wrapper{
+}
+
+#inloggForm{
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#logga{ 
+}
+
+#imglogga{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#reset{
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+}
+#alert{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+}
