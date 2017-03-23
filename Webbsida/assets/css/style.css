@@ -234,16 +234,45 @@ box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 .icon1 {
     height: 1.8em;
     top: 1px;
-    position:relative 
+    position:relative;
 }
 
 .icon3 {
      height: 1.5em;
     top: -1px;
-     position:relative
+     position:relative;
 }
 
 .icon2 {
     height: 1.6em;
+    position:relative;
 }
 
+
+#box2 {
+    width: 15em;
+    text-align: center;
+    display:none;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.8em;
+}
+
+.ikon2 {
+    height: 1.6em;
+    top: 0.5em;
+    position: relative;
+}
+
+.ikon3 {
+    height: 1.5em;
+    top: 0.45em;
+     position: relative;
+}
+
+.ikon1 {
+    height: 1.8em;
+    top: 0.55em;
+    position: relative;
+}
