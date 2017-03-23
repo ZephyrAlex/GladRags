@@ -20,7 +20,7 @@
 
             //Error check
             if (mysqli_query($connection, $sql_del)) {
-                echo nl2br("News successfully deleted.\n");
+                echo nl2br("News deleted successfully.\n");
             } 
             
             else {
@@ -38,7 +38,7 @@
 
             //Error check
             if(mysqli_query($connection, $sql)){
-                echo nl2br("News successfully added.\n");
+                echo nl2br("News added successfully.\n");
             }
 
             else {

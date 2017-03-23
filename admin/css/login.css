@@ -8,14 +8,7 @@ form {
     border-radius: 5px;
     margin: 0 auto;
     background: white;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-}
-
-#logotype {
-    width: 200px; 
+    padding: 50px;
 }
 
 #button {

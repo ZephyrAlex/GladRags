@@ -18,7 +18,7 @@
             
             //Create array variable for selected id's
             $idArr = $_POST['checked_id'];
-
+ 
             foreach($idArr as $id) {
                 //Get imagepath from database
                 $sql_path = "SELECT brand_img FROM brands WHERE brand_id = '$id'";
@@ -27,21 +27,24 @@
                 while($row=mysqli_fetch_array( $result )) {
                     $image_path = $row['brand_img'];
                 }
-
+                
+                //Get filenames from directory
                 $files = glob('../webbsida/bilder/varumarken/*'); 
 
-                //Iterate files
-                foreach($files as $file){
-                    //Delete picture of selected brands            
+                //Iterate files and delete selected images
+                foreach($files as $file){           
                     if($file = $image_path) {
                         unlink($file); 
                         break;
                     }
-                }
-
-                //Delete selected brand from database
-                $sql_del = "Delete FROM brands WHERE brand_id='$id'";
-            }   
+                }            
+            }  
+            
+            //Separate ID-array
+            $comma_separated = implode(",", $idArr);
+            
+            //Delete selected brand from database
+            $sql_del = "Delete FROM brands WHERE brand_id IN($comma_separated)";
 
             if (mysqli_query($connection, $sql_del)) {
                 echo nl2br("Selected brands successfully deleted.\n");

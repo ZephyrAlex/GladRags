@@ -41,30 +41,21 @@
     <script type="text/javascript" src="../webbsida/js/slider.js?<?php echo time(); ?>"></script>
 </head>
 <body>
-    <!-- Top -->
-    <div id="top">
-        <!-- Header -->
-        <div id="header">
-            <a href="index.html"><img src="../webbsida/bilder/logotyp.jpg"></a>
-        </div>
-        <!-- Header end -->
-        <!-- Menu -->
-        <nav>
-            <ul id="menu_ul">
-                <li><a href="index.php"> STARTSIDA </a></li>
-                <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
-                <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
-            </ul>
-                <p id="user"> Logged in as: <?php echo $login_user;?></p>
-            <!-- Logout form -->
-            <form action="logout.php">
-                <input type="submit" id="logoutbutton" value="Logga ut"/>
-            </form>
-            <!-- Logout form end -->
-        </nav>
-        <!-- Menu end -->
-    </div>
-    <!-- Top end -->
+    <!-- Menu -->
+    <nav>
+        <ul id="menu_ul">
+            <li><a href="index.php"> STARTSIDA </a></li>
+            <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
+            <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
+        </ul>
+            <p id="user"> Logged in as: <?php echo $login_user;?></p>
+        <!-- Logout form -->
+        <form action="logout.php">
+            <input type="submit" id="logoutbutton" value="Logga ut"/>
+        </form>
+        <!-- Logout form end -->
+    </nav>
+    <!-- Menu end -->
     
     <!-- Main -->
     <div id="main">
@@ -96,11 +87,14 @@
                     <!-- Upload button -->
                     <input id="button" style="float:right;margin-right:65px;" type="submit" name="submit" value="Lägg till">
                 
-                    
+                    <!-- Delete button -->
+                    <input id="button" style="float:right;position:relative;right:10px;" type="submit" name="del_offers" value="Ta bort">
                     <br>
                 </div>
                 <!-- Edit end -->
-            
+            </form>
+            <!-- Offer form end -->
+                
             <br>
             <br>
             <h2> Slider </h2>
@@ -144,13 +138,6 @@
                 </div>
             </div>
             <!--Image slider end-->
-            
-            <!-- Delete button -->
-                    <input id="button" style="float:right;position:relative;right:10px;" type="submit" name="del_offers" value="Ta bort">
-            </form>
-            <!-- Offer form end -->
-            
-            
         </div>
         <!-- Offers end -->
         
@@ -170,25 +157,28 @@
                     
                     <!-- Submit button -->
                     <input input id="button" style="float:right;margin-right:65px;" type="submit" name="submit_news" value="Lägg till">
+                
+                    <!-- Delete button -->
+                    <input id="button" style="float:right;position:relative;margin-right:10px;" type="submit" name="del_news" value="Ta bort">
+                    
                     <br>
                 </div>
                 <!-- Edit end -->
-                <h2> Nyheter </h2>    
-                <!-- News output -->
-                <div id="news_output">
-                    <p>
-                        <?php
-                             while($row=mysqli_fetch_array( $result5 )){
-                                 echo $row['text'];
-                             }
-                        ?>
-                    </p>
-                </div>
-                <!-- News output end -->
-                <!-- Delete button -->
-                <input id="button" style="float:right;position:relative;margin-right:10px;" type="submit" name="del_news" value="Ta bort">
             </form>
-            <!-- News form end -->  
+            <!-- News form end --> 
+            
+            <h2> Nyheter </h2>    
+            <!-- News output -->
+            <div id="news_output">
+                <p>
+                    <?php
+                         while($row=mysqli_fetch_array( $result5 )){
+                             echo $row['text'];
+                         }
+                    ?>
+                </p>
+            </div>
+            <!-- News output end -->
         </div>
         <!-- News end -->
     </div>
