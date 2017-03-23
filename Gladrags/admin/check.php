@@ -26,5 +26,4 @@
     if(isset($user_check) != true) {
         header("location: logout.php");
     }
-
 ?>

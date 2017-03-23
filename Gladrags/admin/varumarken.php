@@ -35,26 +35,35 @@
     <script type="text/javascript" src="../webbsida/js/slider.js?<?php echo time(); ?>"></script>
 </head>
 <body>
-    <!-- Menu -->
-    <nav>
-        <ul id="menu_ul">
-            <li><a href="index.php"> STARTSIDA </a></li>
-            <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
-            <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
-        </ul>
-            <p id="user"> Logged in as: <?php echo $login_user;?></p>
-        <!-- Logout form -->
-        <form action="logout.php">
-            <input type="submit" id="logoutbutton" value="Logga ut"/>
-        </form>
-        <!-- Logout form end -->
-    </nav>
-    <!-- Menu end -->
+    <!-- Top -->
+    <div id="top">
+        <!-- Header -->
+        <div id="header">
+            <a href="index.html"><img src="../webbsida/bilder/logotyp.jpg"></a>
+        </div>
+        <!-- Header end -->
+        <!-- Menu -->
+        <nav>
+            <ul id="menu_ul">
+                <li><a href="index.php"> STARTSIDA </a></li>
+                <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
+                <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
+            </ul>
+                <p id="user"> Logged in as: <?php echo $login_user;?></p>
+            <!-- Logout form -->
+            <form action="logout.php">
+                <input type="submit" id="logoutbutton" value="Logga ut"/>
+            </form>
+            <!-- Logout form end -->
+        </nav>
+        <!-- Menu end -->
+    </div>
+    <!-- Top end -->
     
     <!-- Main -->
     <div id="main">
         <!-- Brands -->
-        <div id="brands">
+        <div id="brands" style="padding-top:0;">
             <!-- Add brand form -->
             <form action="brands.php" method="post" enctype="multipart/form-data">
                 <!-- Edit -->
@@ -74,9 +83,6 @@
                 
                     <!-- Submit button -->
                     <input id="button" style="float:right;margin-right:65px;" type="submit" name="add_brand" value="Lägg till">
-        
-                    <!-- Delete button -->
-                    <input id="button" style="float:right;position:relative;right:10px;" type="submit" name="del_brand" value="Ta bort">                
                     <br>
                 </div>
                 <!-- Edit end -->
@@ -105,6 +111,9 @@
                     ?>
                 </div>
                 <!-- Brands end -->
+                
+                <!-- Delete button -->
+                <input id="button" type="submit" name="del_brand" value="Ta bort">                
             </form>
             <!-- Delete brand form end -->
         </div>
