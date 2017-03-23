@@ -20,23 +20,21 @@
     <script type="text/javascript" src="assets/js/ninja-slider.js"></script>
     <script type="text/javascript" src="assets/js/menu_toggle.js"></script>
     
-    <!-- JQuery -->
-    <script type="text/javascript" src="assets/js/scroll.js"></script>
-    
     <!-- fav icon -->
     <link rel="shortcut icon" href="bilder/favicon.png"/>
-    
+
 </head>
 <body>
     <!-- Wrapper runt headern -->
     <div id="top">
         <!-- header med Glad Rags logo och Facebook logo -->
         <div id="header">
-            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank"><i class="fa fa-2x fb black fa-facebook-square" aria-hidden="true"></i></a>
+           <!--  <a href="https://www.facebook.com/GLADRAGS2/" target="_blank"><i class="fa fa-2x fb black fa-facebook-square" aria-hidden="true"></i></a> -->
             <!-- Länk på Gladrags logo till Startsida och GladRags Logo -->
-            <a href="index.html"><img src="bilder/GLADRAGS-logotyp.jpg"></a>
+            <a href="index3.html"><img src="bilder/GLADRAGS-logotyp.jpg"></a>
+      
         </div>
-        
+     
         <!-- meny -->
         <nav>
         <div id="mobile_menu">
@@ -46,7 +44,7 @@
             <!--  Knapp slutar -->
         </div>
             <ul id="menu_ul">
-                <li><a href="index.html"> STARTSIDA </a></li>
+                <li><a href="index3.html"> STARTSIDA </a></li>
                 <li><a href="varumarken.html"> VARUMÄRKEN </a></li>
                 <li><a href="om_oss.html"> OM OSS </a></li>
                 <li><a href="anstallda.html"> ANSTÄLLDA </a></li>
@@ -55,8 +53,18 @@
         </nav>
         <!-- meny slutar -->
         
+        
+        <div id="box1" > 
+
+            <img class="icon2" src="bilder/facebook-2.png" style="cursor:pointer;" a href="https://www.facebook.com/GLADRAGS2/" target="_blank" >
+            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank"></a>
+            <img class="icon3" src="bilder/69366.png" style="cursor:pointer;">
+            <img class="icon1" src="bilder/twitter-icon-circle-logo.png" style="cursor:pointer;">
+ 
+            </div>
+        
     </div>
-    <!-- Wrapper slutar -->
+    <!-- Headerwrapper slutar -->
     
     <!-- Body innehåll-->
     <div id="main">
@@ -109,7 +117,7 @@
                 </p>
                 
                 
-                <div id="offers"> <br> <h2> Veckans Erbjudanden! </h2> </div> <div class="body-content1">  </div>
+                <div id="offers"> <br> <h2> Veckans Erbjudanden! </h2> </div> <div class="body-content1">  
        <div class="section-inner">
         
 		<div class="thirds clearfix">
@@ -117,8 +125,8 @@
 			<!-- one-third -->
 			<div class="one-third mobile-collapse">
 			 
-			 <div class="capp"> 499:- </div>	
-				<img id="imgn" src="bilder/img_1.jpg" alt="beskrivning" title="beskrivning"  />
+			 <div class="capp" alt="499kr" title="499kr"> 499:- </div>	
+				<img id="imgn" src="bilder/img_1.jpg" alt="Erjudande 1" title="Erjudande 1"  />
 							
 				
 
@@ -126,16 +134,16 @@
 			
 			<!-- one-third -->
 			<div class="one-third one-third-second mobile-collapse">
-			<div class="capp"> 699:- </div>
+			<div class="capp" alt="699kr" title="699kr"> 699:- </div>
 			
-				<img id="imgn" src="bilder/img_1.jpg" alt="beskrivning" title="beskrivning"/>
+				<img id="imgn" src="bilder/img_1.jpg" alt="Erbjudande 2" title="Erbjudande 2"/>
 				
 			</div>
 			
 			<!-- one-third -->
 			<div class="one-third one-third-last mobile-collapse">
-			<div class="capp"> 349:- </div>
-				<img id="imgn" src="bilder/img_1.jpg"  alt="beskrivning" title="beskrivning"/>
+			<div class="capp" alt="349kr" title="349kr"> 349:- </div>
+				<img id="imgn" src="bilder/img_1.jpg"  alt="Erbjudande 3" title="Erbjudande 3"/>
 				
 				
 			</div>
@@ -152,6 +160,7 @@
 			
 		</div>
 		
+	</div>
 	</div>
 	<br>
 	<br>
@@ -194,7 +203,7 @@
             </div>
             <div id="right">
                 <div id="footer_menu">
-                    <a href="index.html"><h1> Gladrags  </h1></a>
+                    <a href="index3.html"><h1> Gladrags  </h1></a>
                     <a href="varumarken.html"> Varumärken </a>
                     <a href="om_oss.html"> Om oss </a>
                     <a href="anstallda.html"> Anställda </a>
@@ -206,17 +215,38 @@
          
         <!-- Copyright sektionen -->
         <div id="copyright">
-            <a href="https://www.facebook.com/GLADRAGS2/" target="_blank">
-                <i class="fa fa-2x fb black fa-facebook-square" style="position:absolute;bottom:-18px;left:0;" aria-hidden="true"></i>
-            </a>
-            <a href="index.html" class="copyright"><p> © Gladrags, 2015  </p></a>
-            <a href="#" class="go-top">
-                <i class="fa fa-2x black arrow fa-level-up" aria-hidden="true"></i>
-            </a>
+            
+            <a href="index3.html" class="copyright"><p> © Gladrags, 2015  </p></a>
+            
         </div>
         <!-- Copyright sektionen slutar -->
         
     </div>
     <!-- Footer slutar -->
+    
+     <!-- Tillbaka till toppen knapp -->
+     <script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script> 
+<!-- Tillbaka till toppen knapp slutar -->
+
 </body>
 </html>
