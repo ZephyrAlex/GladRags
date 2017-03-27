@@ -106,7 +106,7 @@
     #header .fb {
         top: 2em;
     }
-    
+    /*
      .icon1 {
         top: -2.4em;
     }
@@ -119,17 +119,24 @@
     .icon3 {
         top: -2.5em;
     }
-    
+    */
  
     #box1 {
-    border-bottom: 0;
-    background-color: none;
+
+        display: none;
+  
+    } 
+        #box2 {
+            display: block;
+         width: 15em;
     text-align: center;
-        
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75)
-    }
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.8em;
+  
+    } 
+    
     
     #header img {
         height: 2.8em;
@@ -153,7 +160,7 @@
     }
     
     nav ul {
-        margin-top: 2.8em;
+       
         height: 12.8125em;
         width: 100%;
         border-bottom: 1px solid #666;
@@ -175,7 +182,7 @@
     
     /* Main content Mobile */
     #main {
-        margin-top: 140px;
+        margin-top: 110px;
     }
     
     #content {
