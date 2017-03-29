@@ -7,7 +7,7 @@
 /* Responiv inställningar Karta */
 .map-responsive{
     overflow:hidden;
-    padding-bottom:75%;
+    padding-bottom:70%;
     position:relative;
     height:0;
 }
