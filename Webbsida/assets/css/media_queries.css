@@ -1,9 +1,20 @@
+/* Media Query for Screen max width-640(px) */
+@media (min-width:640px) {
+    #menu_ul{
+        display: block !important;
+    }
+}
+
 /* Media Query for Tablet 640-501(px) */
 @media (max-width:640px) and (min-width:501px) {
     /* Header/Menu */
     #header img {
         height: 3.5em;
         padding: 0.5em;
+    }
+    
+    #menu_ul{
+        display: block !important;
     }
     
     nav {
@@ -35,8 +46,8 @@
         font-size: 1.5em;
     }
     
-    .text h2 {
-        font-size: 1.2em;
+    .text h12 {
+       font-size: 1.2em;
     }
     
     #slider {
@@ -127,8 +138,8 @@
   
     } 
         #box2 {
-            display: block;
-         width: 15em;
+    display: block;
+    width: 15em;
     text-align: center;
     background-color: white;
     margin-left: auto;
