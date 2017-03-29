@@ -17,12 +17,13 @@
 
 
 #ninja-slider .fs-icon {
-    top:6px;
+   top:6px;
     right:6px;
     width:70px;
+    z-index: 10px;
     height:26px;
+    overflow:hidden;
     background: rgba(0,0,0,0.2);
-    z-index:2;
     color:white;
     text-align:center;
     font:bold 11px/26px arial;
@@ -31,7 +32,10 @@
     opacity:0;
     -webkit-transition:opacity 0.8s;
     transition:opacity 0.8s;
+    white-space:nowrap;
 }
+
+
 
 #ninja-slider .slider-inner:hover .fs-icon,
 #ninja-slider.fullscreen .fs-icon {
@@ -53,7 +57,6 @@
 
 #ninja-slider .slider-inner {
     max-width:600px;
-   
     margin:0 auto;/*center-aligned */
     font-size:0px;
     position:relative;

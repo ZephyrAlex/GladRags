@@ -35,8 +35,8 @@
         font-size: 1.5em;
     }
     
-    .text h2 {
-        font-size: 1.2em;
+    .text h12 {
+       font-size: 1.2em;
     }
     
     #slider {
@@ -127,8 +127,8 @@
   
     } 
         #box2 {
-            display: block;
-         width: 15em;
+    display: block;
+    width: 15em;
     text-align: center;
     background-color: white;
     margin-left: auto;
