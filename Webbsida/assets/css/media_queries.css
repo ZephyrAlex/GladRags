@@ -1,3 +1,10 @@
+/* Media Query for Screen max width-640(px) */
+@media (min-width:640px) {
+    #menu_ul{
+        display: block !important;
+    }
+}
+
 /* Media Query for Tablet 640-501(px) */
 @media (max-width:640px) and (min-width:501px) {
     /* Header/Menu */
@@ -6,9 +13,13 @@
         padding: 0.5em;
     }
     
+    #menu_ul{
+        display: block !important;
+    }
+    
     nav {
         height: 2.5em;  
-        
+        box-shadow: 3px 3px 3px #666;
     }
 
     nav ul {
@@ -28,15 +39,15 @@
     
     /* Main content Tablet*/
     #main {
-        margin-top: 116px;
+        margin-top: 150px;
     }
     
     .text h1 {
         font-size: 1.5em;
     }
     
-    .text h2 {
-        font-size: 1.2em;
+    .text h12 {
+       font-size: 1.2em;
     }
     
     #slider {
@@ -106,6 +117,37 @@
     #header .fb {
         top: 2em;
     }
+    /*
+     .icon1 {
+        top: -2.4em;
+    }
+    
+    .icon2 {
+        top: -2.4em;  
+        position: relative;
+    }
+    
+    .icon3 {
+        top: -2.5em;
+    }
+    */
+ 
+    #box1 {
+
+        display: none;
+  
+    } 
+        #box2 {
+    display: block;
+    width: 15em;
+    text-align: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.8em;
+  
+    } 
+    
     
     #header img {
         height: 2.8em;
@@ -121,7 +163,7 @@
     }
     
     nav {
-        height: 2.5em; 
+        height: 2.8em; 
     }
     
     #menu_ul {
@@ -129,7 +171,7 @@
     }
     
     nav ul {
-        margin-top: 2.5em;
+       
         height: 12.8125em;
         width: 100%;
         border-bottom: 1px solid #666;
@@ -151,7 +193,7 @@
     
     /* Main content Mobile */
     #main {
-        margin-top: 107px;
+        margin-top: 110px;
     }
     
     #content {
@@ -271,12 +313,13 @@
         width: 100%;
         height: 7em;
         text-align: center; 
+        
     }
     
     #footer_menu {
         float: left;
-        margin-top: 1em;
         width: 100%;
+        margin-top: 1px;
     }
     
     #footer_menu a {
