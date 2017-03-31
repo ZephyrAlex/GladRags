@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title> Gladrags </title>
-
+    
+    <!-- Kontaktform validering -->
+    <form name="htmlform" method="post" action="assets/validation/html_form_send.php">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/navigation.css">
@@ -143,83 +146,65 @@
         <div id="wrapper">
             <div id="left">
                 <div id="hitta">
-                    <h1 title="Hitta"> Hitta </h1>
-                    <p title="Köpmangatan 14"> Köpmangatan 14 </p>
-                    <p title="641 30 Katrineholm"> 641 30 Katrineholm </p>
-                    <a href="kontakt.html#map">
-                        <p title="Google Maps"> Google Maps </p>
-                    </a>
+                    <h1> Hitta </h1>
+                    <p> Köpmangatan 14 </p>
+                    <p> 641 30 Katrineholm </p>
+                    <a href="kontakt.html#map"><p> Google Maps </p></a>
                 </div>
             </div>
             <div id="center">
                 <div id="kontakt">
-                    <h1 title="Kontakt"> Kontakt </h1>
-                    <p title="Telefon: 0150-533 80"> Telefon: 0150-533 80 </p>
+                    <h1> Kontakt  </h1>
+                    <p> Telefon: 0150-533 80 </p>
                     <a href="mailto:info@gladrags.se"> Mail: info@gladrags.se </a>
                 </div>
             </div>
             <div id="right">
                 <div id="footer_menu">
- 
                     <a href="index.html"><h1> Gladrags  </h1></a>
                     <a href="varumarken.html"> Varumärken </a>
                     <a href="om_oss.html"> Om oss </a>
                     <a href="anstallda.html"> Anställda </a>
                     <a href="kontakt.html"> Kontakt </a>
-
-                    <a href="index3.html">
-                        <h1 title="Gladrags"> Gladrags </h1>
-                    </a>
-                    <a href="varumarken.html" title="Varumärken"> Varumärken </a>
-                    <a href="om_oss.html" title="Om oss"> Om oss </a>
-                    <a href="anstallda.html" title="Anställda"> Anställda </a>
-                    <a href="kontakt.html" title="Kontakt"> Kontakt </a>
- 
                 </div>
             </div>
         </div>
         <!-- Wrapper slutar -->
-
+         
         <!-- Copyright sektionen -->
         <div id="copyright">
- 
             
             <a href="index.html" class="copyright"><p> © Gladrags, 2015  </p></a>
-           
-
-            <a href="index3.html" class="copyright">
-                <p title="© Gladrags, 2015"> © Gladrags, 2015 </p>
-            </a>
- 
+            
         </div>
         <!-- Copyright sektionen slutar -->
-
+        
     </div>
     <!-- Footer slutar -->
+    
+     <!-- Tillbaka till toppen knapp -->
+     <script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
-    <!-- Tillbaka till toppen knapp -->
-    <script type="text/javascript">
-        // create the back to top button
-        $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+var amountScrolled = 300;
 
-        var amountScrolled = 300;
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
 
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > amountScrolled) {
-                $('a.back-to-top').fadeIn('slow');
-            } else {
-                $('a.back-to-top').fadeOut('slow');
-            }
-        });
-
-        $('a.back-to-top, a.simple-back-to-top').click(function() {
-            $('html, body').animate({
-                scrollTop: 0
-            }, 700);
-            return false;
-        });
-    </script>
-    <!-- Tillbaka till toppen knapp slutar -->
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script> 
+<!-- Tillbaka till toppen knapp slutar -->
 
 </body>
 </html>
