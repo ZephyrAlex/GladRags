@@ -1,6 +1,6 @@
 <?php
-    $servername = "localhost";
-    $dbusername = "root";
-    $dbpassword = "";
-    $dbname = "login_system";
+    $servername = "gladrags.se.mysql";
+    $username = "gladrags_se";
+    $password = "bRsTLk6T";
+    $dbname = "gladrags_se";
 ?>
