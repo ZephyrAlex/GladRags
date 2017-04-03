@@ -78,8 +78,8 @@
 .feedback-input:focus{
 	background: #fff;
 	box-shadow: 0;
-	border: 3px solid #e7e7e7;
-	color: #e7e7e7;
+	border: 3px solid #000;
+	color: #000;
 	outline: none;
     padding: 13px 13px 13px 54px;
 }
