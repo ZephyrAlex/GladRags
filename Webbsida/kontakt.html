@@ -7,7 +7,7 @@
     <title> Gladrags </title>
     
     <!-- Kontaktform validering -->
-    <form name="htmlform" method="post" action="assets/validation/html_form_send.php">
+    <form name="htmlform" method="post" action="html_form_send.php">
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -112,20 +112,21 @@
                 </div>
 
                 <!-- Kontaktformulär -->
-                <h2>Kontakta oss:</h2>
+                <h2>Kontakta oss!</h2>
+                Obligatoriskt *
                 <div id="form-div">
                     <form class="form" id="form1">
                         <p class="name">
-                            <input name="name" autocomplete="off" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Namn... (krav)" id="name" />
+                            <input name="name" autocomplete="off" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Namn...*" id="name" />
                         </p>
                         <p class="email">
-                            <input name="email" autocomplete="off" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="E-post... (krav)" />
+                            <input name="email" autocomplete="off" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="E-post...*" />
                         </p>
                         <p class="phone">
-                            <input name="telephone" autocomplete="off" type="text" class="feedback-input" id="telephone" placeholder="Telefonnummer... (frivilligt)" />
+                            <input name="telephone" autocomplete="off" type="text" class="feedback-input" id="telephone" placeholder="Telefonnummer..." />
                         </p>
                         <p class="comment">
-                            <textarea name="text" autocomplete="off" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Kommentar... (minst 10 tecken)"></textarea>
+                            <textarea name="text" autocomplete="off" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Kommentar...*"></textarea>
                         </p>
                         <div class="submit">
                             <input type="submit" value="SKICKA" id="button" />
