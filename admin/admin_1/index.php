@@ -24,19 +24,10 @@ session_start();
         </div>
     <?php
     if(isset($_SESSION['ID'])){
-        echo $_SESSION['ID'];
-        //header("Location: xxx.php")
+        header("location: ../index.php");
     } else{
-        echo "du  är inte inloggad";
     }
-    ?>
-   <br><br><br>
-   
-        <!--<form action="Assets/include/signout.inc.php">
-            <button>LOG OUT</button>
-        </form>-->  
-    
-    
+    ?>  
 </body>
 </html>  
 
