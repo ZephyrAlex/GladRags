@@ -73,20 +73,20 @@
     border: 3px solid rgba(0,0,0,0);
 }
 
-/*Utseende för inmatningsfält när du ligger i det */
+/*Utseende för inmatningsfält när du ligger i det*/
 
 .feedback-input:focus{
 	background: #fff;
 	box-shadow: 0;
-	border: 3px solid #3498db;
-	color: #3498db;
+	border: 3px solid #e7e7e7;
+	color: #e7e7e7;
 	outline: none;
     padding: 13px 13px 13px 54px;
 }
 
 .focused{
-	color:#30aed6;
-	border:#30aed6 solid 3px;
+	color:#e7e7e7;
+	border:#e7e7e7 solid 3px;
 }
 
 /*Lägger till ikoner i inmatningsfälten*/
@@ -183,7 +183,7 @@ input:focus, textarea:focus {
 }
 	
 .submit:hover{
-	color: #3498db;
+	color: #e7e7e7;
 }
 
 /*Animation*/
