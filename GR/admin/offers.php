@@ -31,7 +31,7 @@
             
             //Error check
             if (mysqli_query($connection, $sql_del)) {
-                echo nl2br("Files deleted successfully.\n");
+                echo nl2br("Files successfully deleted.\n");
             } 
             
             else {
@@ -149,7 +149,7 @@
 
                     //Error check
                     if(mysqli_query($connection, $sql)){
-                        echo nl2br("Files added successfully.\n");
+                        echo nl2br("Files successfully added.\n");
                     }
                     
                     else {
