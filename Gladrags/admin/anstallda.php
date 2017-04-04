@@ -42,6 +42,7 @@
             <a href="index.html"><img src="../webbsida/bilder/logotyp.jpg"></a>
         </div>
         <!-- Header end -->
+        
         <!-- Menu -->
         <nav>
             <ul id="menu_ul">
@@ -49,7 +50,7 @@
                 <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
                 <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
             </ul>
-                <p id="user"> Logged in as: <?php echo $login_user;?></p>
+                <p id="user"> Inloggad som: <?php echo $login_user;?></p>
             <!-- Logout form -->
             <form action="logout.php">
                 <input type="submit" id="logoutbutton" value="Logga ut"/>

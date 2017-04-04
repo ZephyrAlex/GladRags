@@ -88,7 +88,7 @@
                 //Check if image files is actual images or fake images
                 if(isset($_POST["submit"])) {
                     $check = getimagesize($_FILES["brand_img"]["tmp_name"]);
-
+ 
                     if($check !== false) {
                         echo nl2br("File is an image - " . $check["mime"] . ".\n");
                         $uploadOk = 1;
