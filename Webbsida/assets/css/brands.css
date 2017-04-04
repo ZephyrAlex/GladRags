@@ -30,6 +30,8 @@
 
 .brand a:hover .brand_popup {
     display: block;
+    opacity: 1;
+    -webkit-transition: all 2s ease-in-out;
 }
 
 /* Varumärken bilder */
@@ -56,5 +58,7 @@
     background: #000;
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
+    opacity: 0;
+    -webkit-transition: none;
 }
 

@@ -216,21 +216,22 @@ a:hover.back-to-top {
     background-color: white;
     text-align: center;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
-.icon1 {
-    height: 1.8em;
-    top: 1px;
+.fb1 {
+    height: 1.9em;
+    top: 0.5em;
     position:relative;
 }
-.icon3 {
-     height: 1.5em;
-    top: -1px;
-     position:relative;
-}
-.icon2 {
+.instagram1 {
     height: 1.6em;
+    top: 0.4em;
+    position:relative;
+}
+.twitter1 {
+    height: 1.9em;
+    top: 0.5em;
     position:relative;
 }
 .fixed1{
@@ -246,19 +247,19 @@ box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     margin-right: auto;
     height: 2.8em;
 }
-.ikon2 {
-    height: 1.6em;
-    top: 0.5em;
+.fb2 {
+    height: 1.9em;
+    top: 0.2em;
     position: relative;
 }
-.ikon3 {
-    height: 1.5em;
-    top: 0.45em;
-     position: relative;
+.instagram2 {
+    height: 1.6em;
+    top: 0.05em;
+    position: relative;
 }
-.ikon1 {
-    height: 1.8em;
-    top: 0.55em;
+.twitter2 {
+    height: 1.9em;
+    top: 0.2em;
     position: relative;
 }
 
