@@ -34,12 +34,6 @@
     box-shadow: 0 5px 10px #666;
 }
 
-#news output {
-    width: 80%;
-    text-align: center;
-    word-break: break-all;
-}
-
 #return_button li {
     background-color: #e7e7e7;
     border: 1px solid black;

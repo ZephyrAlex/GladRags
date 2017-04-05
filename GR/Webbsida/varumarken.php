@@ -1,3 +1,19 @@
+<?php
+    include_once '../connect.php';
+
+    //Create connection
+     $connection = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+ 
+    //Check connection
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
+    }
+    
+    //Brands
+    $sql = "SELECT name, brand_address, brand_img, brand_id FROM brands";
+    $result = $connection->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -10,6 +26,7 @@
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/brands.css">
     <link rel="stylesheet" href="assets/css/media_queries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JS -->
@@ -17,6 +34,7 @@
     <script type="text/javascript" src="assets/js/slider.js"></script>
     <script type="text/javascript" src="assets/js/menu_toggle.js"></script>
     <script type="text/javascript" src="assets/js/menu.js"></script>
+    <script type="text/javascript" src="assets/js/imagegrid.js"></script>
     <!-- fav icon -->
     <link rel="shortcut icon" href="bilder/favicon.png" /> </head>
 
@@ -26,7 +44,7 @@
         <!-- header med Glad Rags logo -->
         <div id="header">
             <!-- Länk på Gladrags logo till Startsida och GladRags Logo -->
-            <a href="index.html"><img class="logga" src="bilder/logotyp.jpg"></a>
+            <a href="index.php"><img class="logga" src="bilder/logotyp.jpg"></a>
         </div>
         <!-- meny -->
         <nav>
@@ -46,10 +64,10 @@
                 <!--  Knapp slutar -->
             </div>
             <ul id="menu_ul">
-                <li><a href="index.html"> STARTSIDA </a></li>
-                <li><a href="varumarken.html"> VARUMÄRKEN </a></li>
+                <li><a href="index.php"> STARTSIDA </a></li>
+                <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
                 <li><a href="om_oss.html"> OM OSS </a></li>
-                <li><a href="anstallda.html"> ANSTÄLLDA </a></li>
+                <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
                 <li><a href="kontakt.html"> KONTAKT </a></li>
             </ul>
         </nav>
@@ -67,9 +85,28 @@
         <div id="content">
             <!-- Text och bilder -->
             <div class="text">
-                <h1 title="Anställda"> Anställda </h1>
-                <p> Lorem ipsum dolor sit amet. </p>
+                <h1> Varumärken </h1> </div>
+            <!-- Varumärken bilder -->
+            <div id="brands">
+                <?php
+                    //Output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo 
+                        '<div class="brand">
+                            
+                            <a href="' .$row['brand_address'] . '" target="_blank">
+                                              
+                                <img src="' .$row["brand_img"]. '">
+                                        
+                                <h1 class="brand_popup">' .$row['name']. '</h1>
+                                        
+                            </a> 
+                                
+                        </div>';
+                    }   
+                ?>
             </div>
+            <!-- Varumärken bilder slutar -->
         </div>
     </div>
     <!-- Bodyn slutar -->
@@ -93,14 +130,16 @@
                     <p title="Telefon: 0150-533 80"> Telefon: 0150-533 80 </p> <a href="mailto:info@gladrags.se"> Mail: info@gladrags.se </a> </div>
             </div>
             <div id="right">
-                <div id="footer_menu"> <a href="index.html"><h1> Gladrags  </h1></a> <a href="varumarken.html"> Varumärken </a> <a href="om_oss.html"> Om oss </a> <a href="anstallda.html"> Anställda </a> <a href="kontakt.html"> Kontakt </a>
-                </div>
+                <div id="footer_menu">
+                    <a href="index.php">
+                        <h1 title="Gladrags"> Gladrags </h1> </a> <a href="varumarken.php" title="Varumärken"> Varumärken </a> <a href="om_oss.html" title="Om oss"> Om oss </a> <a href="anstallda.php" title="Anställda"> Anställda </a> <a href="kontakt.html" title="Kontakt"> Kontakt </a></div>
             </div>
+        </div>
         <!-- Wrapper slutar -->
         <!-- Copyright sektionen -->
         <div id="copyright">
-            <a href="index.html" class="copyright">
-                <p> © Gladrags, 2015 </p>
+            <a href="index.php" class="copyright">
+                <p title="© Gladrags, 2015"> © Gladrags, 2015 </p>
             </a>
         </div>
         <!-- Copyright sektionen slutar -->

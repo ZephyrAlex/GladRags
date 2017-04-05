@@ -1,3 +1,19 @@
+<?php
+    include_once '../connect.php';
+
+    //Create connection
+     $connection = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+ 
+    //Check connection
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
+    }
+    
+    //Employees
+    $sql = "SELECT employee_name, role, description, employee_img, employee_id FROM employees";
+    $result = $connection->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -10,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/slider.css">
-    <link rel="stylesheet" href="assets/css/brands.css">
+    <link rel="stylesheet" href="../admin/css/employees.css">
     <link rel="stylesheet" href="assets/css/media_queries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- JS -->
@@ -18,7 +34,6 @@
     <script type="text/javascript" src="assets/js/slider.js"></script>
     <script type="text/javascript" src="assets/js/menu_toggle.js"></script>
     <script type="text/javascript" src="assets/js/menu.js"></script>
-    <script type="text/javascript" src="assets/js/imagegrid.js"></script>
     <!-- fav icon -->
     <link rel="shortcut icon" href="bilder/favicon.png" /> </head>
 
@@ -28,7 +43,7 @@
         <!-- header med Glad Rags logo -->
         <div id="header">
             <!-- Länk på Gladrags logo till Startsida och GladRags Logo -->
-            <a href="index.html"><img class="logga" src="bilder/logotyp.jpg"></a>
+            <a href="index.php"><img class="logga" src="bilder/logotyp.jpg"></a>
         </div>
         <!-- meny -->
         <nav>
@@ -48,10 +63,10 @@
                 <!--  Knapp slutar -->
             </div>
             <ul id="menu_ul">
-                <li><a href="index.html"> STARTSIDA </a></li>
-                <li><a href="varumarken.html"> VARUMÄRKEN </a></li>
+                <li><a href="index.php"> STARTSIDA </a></li>
+                <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
                 <li><a href="om_oss.html"> OM OSS </a></li>
-                <li><a href="anstallda.html"> ANSTÄLLDA </a></li>
+                <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
                 <li><a href="kontakt.html"> KONTAKT </a></li>
             </ul>
         </nav>
@@ -69,67 +84,15 @@
         <div id="content">
             <!-- Text och bilder -->
             <div class="text">
-                <h1> Varumärken </h1> </div>
-            <!-- Varumärken bilder -->
-            <div id="brands">
-                <div class="brand">
-                    <a href="http://adrianhammond.com/" target="_blank"><img src="bilder/Varumarken/adrian_hammond.gif" alt="Adrian Hammond Logo">
-                        <h1 class="brand_popup"> Adrian Hammond </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://www.borjesson.nu/" target="_blank"><img src="bilder/Varumarken/borjesson.png" alt="Börjesson Logo">
-                        <h1 class="brand_popup"> Börjesson </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="index.html" target="_blank"><img src="bilder/Varumarken/dako.jpg" alt="Dako Logo">
-                        <h1 class="brand_popup"> Dako </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://www.drdenimjeans.com/se/?gclid=CMiRpeSC79ECFR1fGQodXNQIeg" target="_blank"><img src="bilder/Varumarken/dr_denim.png" alt="Dr Denim Logo">
-                        <h1 class="brand_popup"> Dr Denim </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://www.jackjones.com/se/sv/home?gclid=CMX_5fOC79ECFRCUsgodq9IH_g" target="_blank"><img src="bilder/Varumarken/jack_and_jones.jpg" alt="Jack & Jones Logo">
-                        <h1 class="brand_popup"> Jack & Jones </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://www.lyleandscott.com/" target="_blank"><img src="bilder/Varumarken/lyle_and_scott.gif" alt="Lyle & Scott Logo">
-                        <h1 class="brand_popup"> Lyle & Scott </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://proudcanadian.tictail.com/products/apparel" target="_blank"><img src="bilder/Varumarken/proud_canadian.gif" alt="Proud Canadian Logo">
-                        <h1 class="brand_popup"> Proud Canadian </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://rageforleather.com/" target="_blank"><img src="bilder/Varumarken/rage.jpg" alt="Rage Logo">
-                        <h1 class="brand_popup"> Rage </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="https://rutandcircle.com/" target="_blank"><img src="bilder/Varumarken/rut_and_circle.png" alt="Rut & Circle Logo">
-                        <h1 class="brand_popup"> Rut & Circle </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://www.selected.com/se/sv/home?gclid=CL2rl6yD79ECFVtfGQodaFwPPQ" target="_blank"><img src="bilder/Varumarken/selected.jpg" alt="Selected Logo">
-                        <h1 class="brand_popup"> Selected </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="https://www.seveneast.se/" target="_blank"><img src="bilder/Varumarken/seven_east.png" alt="Seven East Logo">
-                        <h1 class="brand_popup"> Seven East </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://www.shirtfactory.se/" target="_blank"><img src="bilder/Varumarken/shirt_factory.jpg" alt="Shirt Factory Logo">
-                        <h1 class="brand_popup"> Shirt Factory </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://www.solidmen.com/" target="_blank"><img src="bilder/Varumarken/solid.png" alt="Solid Logo">
-                        <h1 class="brand_popup"> Solid </h1> </a>
-                </div>
-                <div class="brand">
-                    <a href="http://upfrontcompany.com/" target="_blank"><img src="bilder/Varumarken/upfront.png" alt="Upfront Logo">
-                        <h1 class="brand_popup"> Upfront </h1> </a>
-                </div>
+                <h1 title="Anställda"> Anställda </h1>
+                <?php
+                    //Output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo '<div class="employee">
+                        <img class="employee_img" src="' .$row["employee_img"]. '">' ."<h3>" .$row["employee_name"]. "</h3><h4>". $row["role"] ."</h4><p>". $row["description"] ."</p></div>";
+                    }
+                ?>
             </div>
-            <!-- Varumärken bilder slutar -->
         </div>
     </div>
     <!-- Bodyn slutar -->
@@ -153,16 +116,15 @@
                     <p title="Telefon: 0150-533 80"> Telefon: 0150-533 80 </p> <a href="mailto:info@gladrags.se"> Mail: info@gladrags.se </a> </div>
             </div>
             <div id="right">
-                <div id="footer_menu">
-                    <a href="index.html">
-                        <h1 title="Gladrags"> Gladrags </h1> </a> <a href="varumarken.html" title="Varumärken"> Varumärken </a> <a href="om_oss.html" title="Om oss"> Om oss </a> <a href="anstallda.html" title="Anställda"> Anställda </a> <a href="kontakt.html" title="Kontakt"> Kontakt </a></div>
+                <div id="footer_menu"> <a href="index.php"><h1> Gladrags  </h1></a> <a href="varumarken.php"> Varumärken </a> <a href="om_oss.html"> Om oss </a> <a href="anstallda.php"> Anställda </a> <a href="kontakt.html"> Kontakt </a>
+                </div>
             </div>
         </div>
         <!-- Wrapper slutar -->
         <!-- Copyright sektionen -->
         <div id="copyright">
-            <a href="index.html" class="copyright">
-                <p title="© Gladrags, 2015"> © Gladrags, 2015 </p>
+            <a href="index.php" class="copyright">
+                <p> © Gladrags, 2015 </p>
             </a>
         </div>
         <!-- Copyright sektionen slutar -->

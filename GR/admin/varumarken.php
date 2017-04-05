@@ -28,11 +28,7 @@
     <link rel="stylesheet" type="text/css" href="css/form.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="css/brands.css?<?php echo time(); ?>">
     
-    <link rel="stylesheet" type="text/css" href="../webbsida/css/slider.css?<?php echo time(); ?>">
-    <link rel="stylesheet" type="text/css" href="../webbsida/css/brands.css?<?php echo time(); ?>">
-    
-    <!-- JS -->
-    <script type="text/javascript" src="../webbsida/js/slider.js?<?php echo time(); ?>"></script>
+    <link rel="stylesheet" type="text/css" href="../webbsida/assets/css/brands.css?<?php echo time(); ?>">
 </head>
 <body>
     <!-- Top -->

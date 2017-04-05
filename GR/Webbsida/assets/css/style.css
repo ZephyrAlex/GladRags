@@ -83,11 +83,24 @@
 
 /* Om oss innehåll */
 #om_oss {
-    width: 100%;
+    width: 70%;
     border: 1px solid #666;
     border-radius: 0.2em;
-    margin-top: 1em;
     box-shadow: 3px 3px 3px #666;
+    margin-top: 1em;    
+}
+
+#service {
+    width: 70%;
+    border: 1px solid #666;
+    border-radius: 0.2em;
+    box-shadow: 3px 3px 3px #666;
+    margin-top: 1em;
+    
+}
+
+#slogan {
+    margin: 0 auto;
 }
 
 
@@ -169,8 +182,11 @@
 #imgn {
     max-width: 100%;
 	height: auto;
-    margin: 0 0 10px 0;
+    margin: 26px 0 10px 0;
     border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Caption */
 .capp {
