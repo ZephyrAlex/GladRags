@@ -18,20 +18,16 @@
     $result3 = $connection->query($sql);
     $result4 = $connection->query($sql);
     
-    //News
-    $sql2 = "SELECT * FROM news ORDER BY news_id DESC LIMIT 1";
-    $result5 = $connection->query($sql2);
-
     //Offers
-    $sql3 = "SELECT * FROM offers ORDER BY offers_id DESC LIMIT 1";
-    $result6 = $connection->query($sql3);
-    $result7 = $connection->query($sql3);
-    $result8 = $connection->query($sql3);
+    $sql2 = "SELECT * FROM offers ORDER BY offers_id DESC LIMIT 1";
+    $result5 = $connection->query($sql2);
+    $result6 = $connection->query($sql2);
+    $result7 = $connection->query($sql2);
     
     //Prices
-    $result9 = $connection->query($sql3);
-    $result10 = $connection->query($sql3);
-    $result11 = $connection->query($sql3);
+    $result8 = $connection->query($sql2);
+    $result9 = $connection->query($sql2);
+    $result10 = $connection->query($sql2);
 ?>
  
 <!DOCTYPE html>
@@ -46,11 +42,10 @@
     <link rel="stylesheet" type="text/css" href="css/form.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="css/offers.css?<?php echo time(); ?>">
     
-    <link rel="stylesheet" type="text/css" href="../webbsida/css/slider.css?<?php echo time(); ?>">
-    <link rel="stylesheet" type="text/css" href="../webbsida/css/brands.css?<?php echo time(); ?>">
+    <link rel="stylesheet" type="text/css" href="../webbsida/assets/css/ninja-slider.css?<?php echo time(); ?>">
     
     <!-- JS -->
-    <script type="text/javascript" src="../webbsida/js/slider.js?<?php echo time(); ?>"></script>
+    <script type="text/javascript" src="../webbsida/assets/js/ninja-slider.js?<?php echo time(); ?>"></script>
 </head>
 <body>
     <!-- Top -->
@@ -116,48 +111,36 @@
                 <br>
                 <br>
                 <h2> Slider </h2>
-                
-                <!-- Image slider -->
-                <div id='slider'>
+                <!--Image slider start -->
+                <div id="ninja-slider">
                     <div class="slider-inner">
                         <ul>
                             <li>
-                                <a class="img" 
-                                    href="<?php while($row=mysqli_fetch_array( $result1 )){echo $row['img1'];}?>" 
-
-                                    data-fs-image="<?php while($row=mysqli_fetch_array( $result1 )){echo $row['img1'];}?>">
-                                </a>
+                                <a class="ns-img" href="<?php while($row=mysqli_fetch_array( $result1 )){echo $row['img1'];}?>"></a>
+                                <div class="caption"></div>
                             </li>
                             <li>
-                                <span class="img" 
-                                    style="background-image:url(<?php while($row=mysqli_fetch_array( $result2 )){echo $row['img2'];}?>);" 
-
-                                   data-fs-image="<?php while($row=mysqli_fetch_array( $result2 )){echo $row['img2'];}?>">
-                                </span>
+                                <a class="ns-img" href="<?php while($row=mysqli_fetch_array( $result2 )){echo $row['img2'];}?>"></a>
+                                <div class="caption"></div>
+                                <div class="caption cap1">NYA ERBJUDANDEN</div>
+                                <div class="caption cap1 cap2">VARJE VECKA!</div>
+                                <div class="caption"></div>
                             </li>
                             <li>
-                                <a href="/">
-                                    <img class="img" 
-                                        src="<?php while($row=mysqli_fetch_array( $result3 )){echo $row['img3'];}?>" 
-
-                                        data-fs-image="<?php while($row=mysqli_fetch_array( $result3 )){echo $row['img3'];}?>" 
-                                    /> 
-                                </a>
+                                <a href="/"><img class="ns-img" src="<?php while($row=mysqli_fetch_array( $result3 )){echo $row['img3'];}?>" style="cursor:pointer;" /></a>
+                                <div class="caption"></div>
                             </li>
                             <li>
-                                <a class="img" 
-                                   href="<?php while($row=mysqli_fetch_array( $result4 )){echo $row['img4'];}?>" 
-
-                                   data-fs-image="<?php while($row=mysqli_fetch_array( $result4 )){echo $row['img4'];}?>"> 
-                                </a>
+                                <a class="ns-img" href="<?php while($row=mysqli_fetch_array( $result4 )){echo $row['img4'];}?>"></a>
+                                <div class="caption cap1">BESÖK</div>
+                                <div class="caption cap1 cap2">VÅR FACEBOOK-SIDA!</div>
+                                <div class="caption"></div>
                             </li>
                         </ul>
-                        <!-- Expand picture icon -->
-                        <div class="fs-icon" title="Expand/Close"></div>
+                        <div class="fs-icon" title="Förstora/Stäng"></div>
                     </div>
                 </div>
-                <!--Image slider end-->
-            
+                <!--Image slider end -->      
                 <!-- Delete button -->
                 <input id="button" style="float:right;position:relative;right:10px;" type="submit" name="del_slider" value="Ta bort">
                 <br>
@@ -165,47 +148,6 @@
             <!-- Slider form end -->
         </div>
         <!-- Slider images end -->
-        
-        <!-- News -->
-        <div id="news">    
-            <!-- News form -->
-            <form action="news.php" method="post">
-                <!-- Edit -->
-                <div class="edit"> 
-                    
-                    <h2> Lägg till nyheter </h2>    
-                    <!-- Textarea -->
-                    <textarea cols="40" rows="6" name="news_insert" id="news_insert"></textarea>
-                    
-                    <br>
-                    <br>
-                    
-                    <!-- Submit button -->
-                    <input input id="button" style="float:right;margin-right:65px;" type="submit" name="submit_news" value="Lägg till">
-                    <br>
-                </div>
-                <!-- Edit end -->
-                <h2> Nyheter </h2>    
-                <!-- News output -->
-                <div id="news_output">
-                    <p>
-                        <?php
-                             while($row=mysqli_fetch_array( $result5 )){
-                                 echo $row['text'];
-                             }
-                        ?>
-                    </p>
-                </div>
-                <!-- News output end -->
-                
-                <!-- Delete button -->
-                <input id="button" style="float:right;position:relative;margin-right:10px;" type="submit" name="del_news" value="Ta bort">
-                <br>
-            </form>
-            <!-- News form end -->  
-        </div>
-        <!-- News end -->
-        
         <!-- Offer -->
         <div id="offers">
             <!-- Offer form -->
@@ -255,17 +197,17 @@
                             <!-- one-third -->
                             <div class="one-third mobile-collapse">
                                 <div class="capp" alt="price1" title="price1">
-                                    <?php while($row=mysqli_fetch_array( $result6 )){echo $row['price1'];}?>:- 
+                                    <?php while($row=mysqli_fetch_array( $result8 )){echo $row['price1'];}?>:- 
                                 </div>
-                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result7 )){echo $row['offer1'];}?>" alt="Erjudande 1" title="Erjudande 1" />
+                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result5 )){echo $row['offer1'];}?>" alt="Erjudande 1" title="Erjudande 1" />
                             </div>
 
                             <!-- one-third -->
                             <div class="one-third one-third-second mobile-collapse">
                                 <div class="capp" alt="price2" title="price2">
-                                    <?php while($row=mysqli_fetch_array( $result8 )){echo $row['price2'];}?>:- 
+                                    <?php while($row=mysqli_fetch_array( $result9 )){echo $row['price2'];}?>:- 
                                 </div>
-                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result9 )){echo $row['offer2'];}?>" alt="Erbjudande 2" title="Erbjudande 2" />
+                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result6 )){echo $row['offer2'];}?>" alt="Erbjudande 2" title="Erbjudande 2" />
                             </div>
 
                             <!-- one-third -->
@@ -273,7 +215,7 @@
                                 <div class="capp" alt="price3" title="price3">
                                     <?php while($row=mysqli_fetch_array( $result10 )){echo $row['price3'];}?>:- 
                                 </div>
-                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result11 )){echo $row['offer3'];}?>" alt="Erbjudande 3" title="Erbjudande 3" />
+                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result7 )){echo $row['offer3'];}?>" alt="Erbjudande 3" title="Erbjudande 3" />
                             </div>
                         </div>
 
@@ -286,14 +228,13 @@
                     </div>
                 </div>
                 <!-- Offer images end-->
-            
                 <!-- Delete button -->
                 <input id="button" style="float:right;position:relative;right:10px;" type="submit" name="del_offers" value="Ta bort">
                 <br>
             </form>
             <!-- Offer form end -->
         </div>
-        <!-- Offer end -->
+        <!-- Offer end -->        
     </div>
     <!-- Main end -->
 </body>

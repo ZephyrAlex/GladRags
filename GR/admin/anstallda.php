@@ -27,12 +27,6 @@
     <link rel="stylesheet" type="text/css" href="css/navigation.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="css/form.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="css/employees.css?<?php echo time(); ?>">
-    
-    <link rel="stylesheet" type="text/css" href="../webbsida/css/slider.css?<?php echo time(); ?>">
-    <link rel="stylesheet" type="text/css" href="../webbsida/css/brands.css?<?php echo time(); ?>">
-    
-    <!-- JS -->
-    <script type="text/javascript" src="../webbsida/js/slider.js?<?php echo time(); ?>"></script>
 </head>
 <body>
     <!-- Top -->
@@ -78,7 +72,7 @@
                     <input type="text" name="role" id="role">
                     
                     <p> Beskrivning </p>
-                    <p><textarea cols="40" rows="5" name="description" id="description"></textarea></p>
+                    <p><textarea placeholder="Skriv max två rader..." cols="40" rows="2" name="description" id="description"></textarea></p>
                     <br>
                     
                     <p> Bild </p>
@@ -96,7 +90,7 @@
                 <?php
                     //Output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo '<div class="employee"><input type="checkbox" id="checked_id[]" name="checked_id[]" value="' .$row["employee_id"]. '" /><img class="employee_img" src="' .$row["employee_img"]. '">' ."<h3>" .$row["employee_name"]. "</h3><h4>". $row["role"] ."</h4><p>". $row["description"] ."</p></div><br>";
+                        echo '<div class="employee"><input type="checkbox" id="checked_id[]" name="checked_id[]" value="' .$row["employee_id"]. '" /><img class="employee_img" src="' .$row["employee_img"]. '">' ."<h3>" .$row["employee_name"]. "</h3><h4>". $row["role"] ."</h4><p>". $row["description"] ."</p></div>";
                     }
                 ?>
                 <!-- Delete button -->

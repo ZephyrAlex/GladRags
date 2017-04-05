@@ -1,3 +1,33 @@
+<?php
+    include_once '../connect.php';
+
+    //Create connection
+     $connection = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+ 
+    //Check connection
+    if ($connection->connect_error) {
+        die("Connection failed: " . $connection->connect_error);
+    }
+    
+    //Slider
+    $sql = "SELECT * FROM slider ORDER BY slider_id DESC LIMIT 1";
+    $result1 = $connection->query($sql);
+    $result2 = $connection->query($sql);
+    $result3 = $connection->query($sql);
+    $result4 = $connection->query($sql);
+    
+    //Offers
+    $sql2 = "SELECT * FROM offers ORDER BY offers_id DESC LIMIT 1";
+    $result5 = $connection->query($sql2);
+    $result6 = $connection->query($sql2);
+    $result7 = $connection->query($sql2);
+    
+    //Prices
+    $result8 = $connection->query($sql2);
+    $result9 = $connection->query($sql2);
+    $result10 = $connection->query($sql2);
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -27,7 +57,7 @@
         <!-- header med Glad Rags logo -->
         <div id="header">
             <!-- Länk på Gladrags logo till Startsida och GladRags Logo -->
-            <a href="index.html"><img class="logga" src="bilder/logotyp.jpg"></a>
+            <a href="index.php"><img class="logga" src="bilder/logotyp.jpg"></a>
         </div>
         <!-- meny -->
         <nav>
@@ -42,10 +72,10 @@
                 <!--  Knapp slutar -->
             </div>
             <ul id="menu_ul">
-                <li><a href="index.html"> STARTSIDA </a></li>
-                <li><a href="varumarken.html"> VARUMÄRKEN </a></li>
+                <li><a href="index.php"> STARTSIDA </a></li>
+                <li><a href="varumarken.php"> VARUMÄRKEN </a></li>
                 <li><a href="om_oss.html"> OM OSS </a></li>
-                <li><a href="anstallda.html"> ANSTÄLLDA </a></li>
+                <li><a href="anstallda.php"> ANSTÄLLDA </a></li>
                 <li><a href="kontakt.html"> KONTAKT </a></li>
             </ul>
         </nav>
@@ -68,22 +98,22 @@
                     <div class="slider-inner">
                         <ul>
                             <li>
-                                <a class="ns-img" href="bilder/1.jpg"></a>
+                                <a class="ns-img" href="<?php while($row=mysqli_fetch_array( $result1 )){echo $row['img1'];}?>"></a>
                                 <div class="caption"></div>
                             </li>
                             <li>
-                                <a class="ns-img" href="bilder/2.jpg"></a>
+                                <a class="ns-img" href="<?php while($row=mysqli_fetch_array( $result2 )){echo $row['img2'];}?>"></a>
                                 <div class="caption"></div>
                                 <div class="caption cap1">NYA ERBJUDANDEN</div>
                                 <div class="caption cap1 cap2">VARJE VECKA!</div>
                                 <div class="caption"></div>
                             </li>
                             <li>
-                                <a href="/"><img class="ns-img" src="bilder/kill_mossor.jpg" style="cursor:pointer;" /></a>
+                                <a href="/"><img class="ns-img" src="<?php while($row=mysqli_fetch_array( $result3 )){echo $row['img3'];}?>" style="cursor:pointer;" /></a>
                                 <div class="caption"></div>
                             </li>
                             <li>
-                                <a class="ns-img" href="bilder/halsdukar.jpg"></a>
+                                <a class="ns-img" href="<?php while($row=mysqli_fetch_array( $result4 )){echo $row['img4'];}?>"></a>
                                 <div class="caption cap1">BESÖK</div>
                                 <div class="caption cap1 cap2">VÅR FACEBOOK-SIDA!</div>
                                 <div class="caption"></div>
@@ -94,41 +124,56 @@
                 </div>
                 <!--Image slider slutar-->
                 <h2> Välkommen! </h2>
-                <p>
-                    <br>
                     <p> Den 3 augusti, 2012 öppnade Gladrags, efter att Birgitta under en period varit kontakt med ett stort antal leverantörer och representatner för kända klädmärken. Ett viktigt jobb för att hitta den rätta mixen för sina kunder. </p>
                     <br>
                     <p> Idag är Gladrags en butik som är känd och etablerad där Birgitta med personal står för en välkomnande miljö och en gedigen kunskap om kläder, mode, stil och de nyaste trenderna. </p>
                     <div id="offers">
                         <br>
-                        <h2> Veckans Erbjudanden! </h2> </div>
+                        <h2> Veckans Erbjudanden! </h2> 
+                    </div>
                     <div class="body-content1">
-                        <div class="section-inner">
-                            <div class="thirds clearfix">
-                                <!-- one-third -->
-                                <div class="one-third mobile-collapse">
-                                    <div class="capp" alt="499kr" title="499kr"> 499:- </div> <img id="imgn" src="bilder/img_1.jpg" alt="Erjudande 1" title="Erjudande 1" /> </div>
-                                <!-- one-third -->
-                                <div class="one-third one-third-second mobile-collapse">
-                                    <div class="capp" alt="699kr" title="699kr"> 699:- </div> <img id="imgn" src="bilder/img_1.jpg" alt="Erbjudande 2" title="Erbjudande 2" /> </div>
-                                <!-- one-third -->
-                                <div class="one-third one-third-last mobile-collapse">
-                                    <div class="capp" alt="349kr" title="349kr"> 349:- </div> <img id="imgn" src="bilder/img_1.jpg" alt="Erbjudande 3" title="Erbjudande 3" /> </div>
+                    <div class="section-inner">
+                        <div class="thirds clearfix">
+                            
+                            <!-- one-third -->
+                            <div class="one-third mobile-collapse">
+                                <div class="capp" alt="price1" title="price1">
+                                    <?php while($row=mysqli_fetch_array( $result8 )){echo $row['price1'];}?>:- 
+                                </div>
+                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result5 )){echo $row['offer1'];}?>" alt="Erjudande 1" title="Erjudande 1" />
                             </div>
-                            <!-- two-columns -->
-                            <div class="two-columns clearfix">
-                                <!-- main -->
-                                <div class="main mobile-collapse"> </div>
-                                <div class="side mobile-collapse"> </div>
+
+                            <!-- one-third -->
+                            <div class="one-third one-third-second mobile-collapse">
+                                <div class="capp" alt="price2" title="price2">
+                                    <?php while($row=mysqli_fetch_array( $result9 )){echo $row['price2'];}?>:- 
+                                </div>
+                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result6 )){echo $row['offer2'];}?>" alt="Erbjudande 2" title="Erbjudande 2" />
+                            </div>
+
+                            <!-- one-third -->
+                            <div class="one-third one-third-last mobile-collapse">
+                                <div class="capp" alt="price3" title="price3">
+                                    <?php while($row=mysqli_fetch_array( $result10 )){echo $row['price3'];}?>:- 
+                                </div>
+                                <img id="imgn" src="<?php while($row=mysqli_fetch_array( $result7 )){echo $row['offer3'];}?>" alt="Erbjudande 3" title="Erbjudande 3" />
                             </div>
                         </div>
+
+                        <!-- two-columns -->
+                        <div class="two-columns clearfix">
+                            <!-- main -->
+                            <div class="main mobile-collapse"> </div>
+                            <div class="side mobile-collapse"> </div>
+                        </div>
                     </div>
+                </div>
                     <br>
                     <br>
                     <h2 class="fb-feed"> Kolla in våra nyheter på facebook! </h2>
                     <br>
                     <div align="center">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGLADRAGS2%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=1283787944997931" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>        
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FGLADRAGS2%2F&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=1283787944997931" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>        
                     </div>
                     <br> </div>
         </div>
@@ -154,13 +199,13 @@
                     <p> Telefon: 0150-533 80 </p> <a href="mailto:info@gladrags.se"> Mail: info@gladrags.se </a> </div>
             </div>
             <div id="right">
-                <div id="footer_menu"> <a href="index.html"><h1> Gladrags  </h1></a> <a href="varumarken.html"> Varumärken </a> <a href="om_oss.html"> Om oss </a> <a href="anstallda.html"> Anställda </a> <a href="kontakt.html"> Kontakt </a> </div>
+                <div id="footer_menu"> <a href="index.php"><h1> Gladrags  </h1></a> <a href="varumarken.php"> Varumärken </a> <a href="om_oss.html"> Om oss </a> <a href="anstallda.php"> Anställda </a> <a href="kontakt.html"> Kontakt </a> </div>
             </div>
         </div>
         <!-- Wrapper slutar -->
         <!-- Copyright sektionen -->
         <div id="copyright">
-            <a href="index.html" class="copyright">
+            <a href="index.php" class="copyright">
                 <p> © Gladrags, 2015 </p>
             </a>
         </div>
@@ -189,5 +234,4 @@
     </script>
     <!-- Tillbaka till toppen knapp slutar -->
 </body>
-
 </html>
